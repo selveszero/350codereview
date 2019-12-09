@@ -1,0 +1,71 @@
+<html>
+
+<head>
+	<script> 
+        // Function to check Whether both passwords 
+        // is same or not. 
+        function checkPassword(form) { 
+            password1 = form.password.value; 
+            password2 = form.passwordConfirm.value; 
+
+            // If password not entered 
+            if (password1 == '') 
+                alert ("Please enter Password!"); 
+                  
+            // If confirm password not entered 
+            else if (password2 == '') 
+                alert ("Please enter password confirmation!"); 
+                  
+            // If Not same return False.     
+            else if (password1 != password2) { 
+                alert ("\n Password did not match: Please try again!") 
+                return false; 
+            } 
+        }
+
+        function showPassword() {
+		  var x = document.getElementById("password");
+		  if (x.type === "password") {
+		    x.type = "text";
+		  } else {
+		    x.type = "password";
+		  }
+		} 
+
+		function showPasswordC() {
+		  var x = document.getElementById("passwordConfirm");
+		  if (x.type === "password") {
+		    x.type = "text";
+		  } else {
+		    x.type = "password";
+		  }
+		} 
+        </script> 
+</head>
+<form action="/create" method="post" onSubmit = "return checkPassword(this)">
+
+<h1> Create your account </h1>
+<p>
+Full Name: <input name="name">
+<p>
+Email (This will be your username): <input type="email" name="email">
+<p>
+Password: <input type="password" name="password" id="password">
+
+<!-- An element to toggle between password visibility -->
+<input type="checkbox" onclick="showPassword()"> Show Password
+<p>
+Confirm Password: <input type="password" name="passwordConfirm" id="passwordConfirm">
+<input type="checkbox" onclick="showPasswordC()"> Show Password
+<p>
+School: <input name="school">
+<p>	
+If you want to become an admin, please enter the secret code: <input type="password" name="adminCode" id="adminCode">
+<p>
+<input type="submit" value="Create">
+
+</form>
+
+
+
+</html>

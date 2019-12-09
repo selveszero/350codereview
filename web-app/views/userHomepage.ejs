@@ -1,0 +1,49 @@
+
+
+<h1> Welcome to Sharing Excess, <%= person.name %> </h1>
+
+<form action="/createEventForm">
+	<button>
+		Create Event
+	</button>
+</form>
+
+<form action="/logout">
+	<button>
+		Logout
+	</button>
+</form>
+
+<h2> All events </h2>
+<% events.forEach( (event) => { %>
+
+<% if (event.eventOwner === person.email) { %>
+
+<b> Event name:</b> <%= event.name %> | 
+<b> Time: </b> <%= event.date %>, | 
+<b> Location: </b> <%= event.location %> | 
+<b> Food type: </b> <%= event.food %> 
+
+<form action="/displayEvent/<%=event._id%>">
+	<button>
+		More Details
+	</button>
+</form>
+
+<form action="/editEvent/<%=event._id%>">
+	<button>
+		Edit Event
+	</button>
+</form>
+
+<form action="/deleteEvent/<%=event._id%>">
+	<button>
+		Delete Event
+	</button>
+</form>
+
+
+
+<% } %>
+
+<% }); %>

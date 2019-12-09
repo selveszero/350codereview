@@ -1,0 +1,10 @@
+Here are all the people:
+<ul>
+<% persons.forEach( (person) => { %>
+
+<li><%= person.name %>: <%= person.email %> | <%= person.password %></li>
+
+<% }); %>
+</ul>
+
+<br><a href="/">Create New Person</a>

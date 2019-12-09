@@ -1,0 +1,15 @@
+<form action="/createEvent/<%=person.email%>" method="post">
+
+<h1> Create your next event, <%= person.name %>! </h1>
+<p>
+Event name: <input name="name">
+<p>
+Event date and time: <input type="datetime-local" name="date">
+<p>
+Event location: <input type="text" name="location">
+<p>
+Type of food: <input type="text" name="foodType">
+<p>
+<input type="submit" value="Create">
+
+</form>

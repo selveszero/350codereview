@@ -1,0 +1,14 @@
+<h1> Disapprove the Event </h1>
+<p>
+<b>Name:</b> <%= event.name %>
+<p>
+<b>Location:</b> <%= event.location %>
+<p>
+<b>Date:</b> <%= event.date %>
+<p>
+<b>Food type:</b> <%= event.food %>
+<p>
+<a href="mailto: <%=email%> ?bcc= <%=sender%> &subject=EventNotApproved&body=YourEventWasNotApproved">EmailEventOwner</a>
+<form action="/allEvents">
+    <button> Back to home </button>
+</form>

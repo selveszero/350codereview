@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">FoodSharing</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign up</string>
+    <string name="name">Name</string>
+    <string name="school">School</string>
+    <string name="verification">Password verification</string>
+    <string name="createAccount">Create Account</string>
+    <string name="defaultEvent">Default</string>
+    <string name="editProfile">Edit Profile</string>
+    <string name="logout">Log Out</string>
+    <string name="favorite">Favorite</string>
+    <string name="favorites">Favorites</string>
+    <string name="my_events">My Events</string>
+    <string name="event_id">ID</string>
+    <string name="event_owner">Owner</string>
+    <string name="event_name">Name</string>
+    <string name="event_date">Date</string>
+    <string name="event_location">Location</string>
+    <string name="event_food">Food</string>
+    <string name="notify">Notify</string>
+</resources>

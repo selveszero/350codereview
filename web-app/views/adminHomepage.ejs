@@ -1,0 +1,30 @@
+<h1> Welcome to Sharing Excess, <%= person.name %> </h1>
+
+<form action="/logout">
+	<button>
+		Logout
+	</button>
+</form>
+
+<h2> All events </h2>
+<% events.forEach( (event) => { %>
+
+<b> Event name:</b> <%= event.name %> | 
+<b> Time: </b> <%= event.date %>, | 
+<b> Location: </b> <%= event.location %> | 
+<b> Food type: </b> <%= event.food %> |
+<b> Approved? </b> <%= event.approved %>
+
+<form action="/approveEvent/<%=event._id%>">
+	<button>
+		Approve Event
+	</button>
+</form>
+
+<form action="/disapproveEvent/<%=event._id%>">
+	<button>
+		Disapprove Event
+	</button>
+</form>
+
+<% }); %>

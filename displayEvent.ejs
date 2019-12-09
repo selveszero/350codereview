@@ -1,0 +1,18 @@
+<h1> More Information </h1>
+<p>
+<b>Name:</b> <%= event[0].name %>
+<p>
+<b>Location:</b> <%= event[0].location %>
+<p>
+<b>Date:</b> <%= event[0].date %>
+<p>
+<b>Food type:</b> <%= event[0].food %>
+<p>
+<% if (event[0].approved) { %>
+<form action="/notify">
+	<button> Notify </button>
+</form>
+<%}%>
+<form action="/allEvents">
+    <button> Back to home </button>
+</form>
